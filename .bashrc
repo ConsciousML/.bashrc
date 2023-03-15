@@ -58,9 +58,3 @@ alias grep='grep --color=auto'
 export PS1='$(if [[ -n "$VIRTUAL_ENV" ]]; then echo "(\[\033[0;33m\]${VIRTUAL_ENV##*/}\[\033[0m\]) "; fi)\[\e[1;31m\]\u \[\e[1;34m\]\w\[\e[0m\]$(git branch &> /dev/null; if [ $? -eq 0 ]; then echo " \[\033[1;37m\][\[\033[1;30m\]$(git branch | grep \* | cut -d " " -f2)\[\033[1;37m\]]\[\033[0m\]"; fi)\n> '
 
 alias grep='grep --color=auto'
-
-export VIRTUAL_ENV_DISABLE_PROMPT=1
-export WORKON_HOME=/home/consciousml/.virtualenvs
-export PROJECT_HOME=/home/consciousml/Devel
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-source ~/.local/bin/virtualenvwrapper.sh
