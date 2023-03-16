@@ -1,6 +1,10 @@
 #!/bin/bash
 iatest=$(expr index "$-" i)
 
+# For Loading the SSH key
+/usr/bin/keychain -q --nogui $HOME/.ssh/id_rsa
+source $HOME/.keychain/$HOST-sh
+
 #######################################################
 # SOURCED ALIAS'S AND SCRIPTS BY zachbrowne.me
 #######################################################
