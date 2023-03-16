@@ -1,9 +1,8 @@
 #!/bin/bash
 iatest=$(expr index "$-" i)
 
-# For Loading the SSH key
-/usr/bin/keychain -q --nogui $HOME/.ssh/id_rsa
-source $HOME/.keychain/$HOST-sh
+# Only on native Unix not WSL2 
+#eval `keychain --eval id_rsa`
 
 #######################################################
 # SOURCED ALIAS'S AND SCRIPTS BY zachbrowne.me
@@ -62,3 +61,5 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 export PS1='$(if [[ -n "$VIRTUAL_ENV" ]]; then echo "(\[\033[0;33m\]${VIRTUAL_ENV##*/}\[\033[0m\]) "; fi)\[\e[1;31m\]\u \[\e[1;34m\]\w\[\e[0m\]$(git branch &> /dev/null; if [ $? -eq 0 ]; then echo " \[\033[1;37m\][\[\033[1;30m\]$(git branch | grep \* | cut -d " " -f2)\[\033[1;37m\]]\[\033[0m\]"; fi)\n> '
 
 alias grep='grep --color=auto'
+
+alias ssh='ssh.exe'
