@@ -53,3 +53,4 @@ export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
 
 source $HOME/.keychain/$HOSTNAME-sh
+source ~/.local/bin/virtualenvwrapper.sh
