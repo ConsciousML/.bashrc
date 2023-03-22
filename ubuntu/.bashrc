@@ -38,9 +38,6 @@ export PS1='$(if [[ -n "$VIRTUAL_ENV" ]]; then echo "(\[\033[0;33m\]${VIRTUAL_EN
 
 alias grep='grep --color=auto'
 
-# For WSL2
-#alias ssh='ssh.exe'
-
 #### pyenv config
 if [ -f "$HOME/.pyenv/bin/pyenv" ] && ! type -P pyenv &>/dev/null ; then
   export PYTHON_CONFIGURE_OPTS="--enable-shared"
@@ -54,3 +51,5 @@ fi
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
+
+source $HOME/.keychain/$HOSTNAME-sh
