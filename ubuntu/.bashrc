@@ -52,5 +52,8 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
 
-source $HOME/.keychain/$HOSTNAME-sh
+eval `keychain --eval --agents ssh id_rsa`
+
 source ~/.local/bin/virtualenvwrapper.sh
+
+complete -C /usr/bin/terraform terraform
