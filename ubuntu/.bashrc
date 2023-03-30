@@ -56,4 +56,5 @@ eval `keychain --eval --agents ssh id_rsa`
 
 source ~/.local/bin/virtualenvwrapper.sh
 
-complete -C /usr/bin/terraform terraform
+# To setup Terraform autocomplete
+#complete -C /usr/bin/terraform terraform
